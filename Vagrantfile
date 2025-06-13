@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Run ansible on creation
     repo.vm.provision :shell, :inline => "rm -f /EMPTY"
     repo.vm.provision :shell, :inline => "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;"
-    repo.vm.provision :shell, :inline => "yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y; sudo yum install -y sshpass python3-pip python3-devel httpd sshpass vsftpd createrepo"
+    repo.vm.provision :shell, :inline => "yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y; sudo yum install -y sshpass python3-pip python3-devel httpd sshpass vsftpd createrepo"
     repo.vm.provision :shell, :inline => "python3 -m pip install -U pip ; python3 -m pip install pexpect ;  python3 -m pip install ansible"
     repo.vm.provision :ansible_local do |ansible|
       ansible.playbook = "/vagrant/playbooks/build-nodes.yml"

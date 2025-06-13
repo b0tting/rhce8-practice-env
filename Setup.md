@@ -11,6 +11,7 @@ I run Linux (Arch) on my machine and that's where I developed and tested the cod
 + Vagrant - [Vagrant Downloads](https://www.vagrantup.com/downloads.html)
 + Vagrant Ansible plugin - `vagrant plugin install vagrant-guest_ansible`
 + VirtualBox and Virtual Box Extension Pack - [Virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
++ Vagrant Virtual Box plugin - `vagrant plugin install vagrant-vbguest`
 + Git (optional)
 + Ansible (optional)
 
