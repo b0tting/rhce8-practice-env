@@ -165,7 +165,7 @@ vagrant ssh control
 cd /vagrant
 
 # Run the playbook
-ansible-playbook playbooks/register-control.yml
+ANSIBLE_CONFIG=/vagrant/ansible.cfg ansible-playbook playbooks/register-control.yml
 ```
 
 ## Known Issues
